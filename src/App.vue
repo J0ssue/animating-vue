@@ -1,28 +1,25 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-  </div>
+    <div id="app">
+        <router-link to="/">home</router-link> /
+        <router-link to="/about">about</router-link>/
+        <router-link to="/list">list</router-link>/
+        <router-link to="/drawer">drawer</router-link>/
+        <router-link to="/simple">simple</router-link>/
+        <router-link to="/stagger">stagger</router-link>/
+        <router-link to="/state">state</router-link>/
+        <router-link to="/timeline">timeline</router-link>/
+        <router-link to="/master">master</router-link>/
+        <transition
+            name="slide-fade"
+            mode="out-in"
+        >
+            <router-view />
+        </transition>
+    </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-
-export default {
-  name: "App",
-  components: {
-    HelloWorld
-  }
-};
+    export default {
+        name: 'App'
+    }
 </script>
-
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
